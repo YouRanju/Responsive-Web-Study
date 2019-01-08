@@ -4,8 +4,8 @@
 /* font-family: 'Orbitron', sans-serif; */
 
 /* layout */
-body { background-color: #f1f4fb;  }
-#header { height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
+body { background: #f1f4fb url(../img/header_bg.jpg) repeat-x center top;  }
+#header { height: 327px; }
 #nav { display: none; }
 #tit { background-color:#fff; border-bottom: 1px solid #dbdbdb; }
 #contents .container { border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; }
@@ -137,8 +137,11 @@ body { background-color: #f1f4fb;  }
     .cbox.box1 .cbox_desc { display: none; }
     .cbox.box1 .menu li a i { display: none; }
     .cbox.box1 .menu ul { overflow: hidden; }
-    .cbox.box1 .menu li { float: left; width: 33.3333%; text-align: center; }
-
+    .cbox.box1 .menu li { float: left; width: 33.3333%; text-align: center;
+        border-right: 1px solid #dbdbdb; box-sizing: border-box; }
+    .cbox.box1 .menu li a { color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
+    .cbox.box1 .menu li:nth-child(3n) { border-right: 0; }
+    .cbox.box2 { background: #f1f4fb; }
 }
 
 @media (max-width: 480px) {

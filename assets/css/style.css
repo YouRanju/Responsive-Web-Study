@@ -78,6 +78,26 @@ body { background-color: #f1f4fb; }
     font-size: 35px; border-radius: 50%; }
 .tit .tit_btn i { line-height: 60px;}
 
+/* cbox */
+.cbox { padding: 15px; border-bottom: 1px solid #dbdbdb; }
+.cbox .cbox_tit { font-size: 20px; color: #2f7fa6; text-transform: uppercase;
+    padding-bottom: 5px; }
+.cbox .cbox_desc { border-bottom: 1px dashed #dbdbdb; padding-bottom: 15px;
+    margin-bottom: 15px; color: #878787; line-height: 18px;}
+.cbox.box1 { }
+.cbox.box2 { }
+.cbox.box3 { }
+.cbox.box4 { }
+.cbox.box5 { }
+.cbox.box6 { }
+.cbox.box7 { }
+.cbox.box8 { }
+.cbox.box9 { }
+
+#cont_left article:nth-child(4) { border-bottom: 0; }
+#cont_center article:nth-child(4) { border-bottom: 0; }
+#cont_right article:nth-child(4) { border-bottom: 0; }
+
 /* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
 @media (max-width: 1280px) {
     .container { width: 100%; }

@@ -7,7 +7,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,texta
 fieldset,img{border:0 none}
 
 /* 리스트 스타일 초기화 */
-dl,ul,ol,menu,li{list-style:none}
+dl,ul,ol,menu,li{ list-style:none; }
 
 /*폰트 초기화 */
 body,th,td,input,select,textarea,button {
@@ -16,12 +16,15 @@ body,th,td,input,select,textarea,button {
     color:#222;
 }
 
-a{color:#222;text-decoration:none}
-a:hover{color:#118eff;text-decoration:none}
-a:active{background-color:transparent}
+a{ color:#222; text-decoration:none; }
+a:hover{ color:#118eff; text-decoration:none; }
+a:active { background-color:transparent; }
 
 /* 폰트 스타일 초기화 */
-address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+address,caption,cite,code,dfn,em,var { font-style:normal; font-weight:normal; }
+
+/* 폰트 두께 초기화 */
+h1,h2,h3,h4,h5,h6,strong { font-weight: normal; }
 
 /* blind 효과 */
 .blind { position: absolute; left: 0; top: 0; height: 0;

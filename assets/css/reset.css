@@ -26,3 +26,8 @@ address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
 /* blind 효과 */
 .blind { position: absolute; left: 0; top: 0; height: 0;
     line-height: 0; font-size: 0; overflow: hidden; }
+
+/* clearfix */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { display: block; content: ''; line-height: 0; }
+.clearfix:after { clear: both; }

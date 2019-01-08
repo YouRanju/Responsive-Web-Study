@@ -45,6 +45,7 @@
     border-right: 5px solid transparent;
 }
 .icon li a:hover span { opacity: 1; top: -35px; }
+.ie8 .icon li a span { display: none; }
 
 /* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
 @media (max-width: 1280px) {

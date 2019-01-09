@@ -185,6 +185,11 @@ body { background: #f1f4fb url(../img/header_bg.jpg) repeat-x center top;  }
 .square a:nth-child(10):before { content: 'drop-shadows'; }
 .square a:hover:nth-child(10) img { filter: drop-shadow(5px 5px 10px black); }
 
+/* video */
+.video { position: relative; width: 100%; padding-bottom: 56.25%; }
+.video .iframe { width: 100%; height: 100%; position: absolute;
+    border: 0;}
+
 /* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
 @media (max-width: 1280px) {
     .container { width: 100%; }

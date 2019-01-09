@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 여백 초기화 */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button,figure,figcaption {margin:0;padding:0}
 
 /* 테두리 초기화 */
 fieldset,img{border:0 none}
@@ -34,6 +34,9 @@ h1,h2,h3,h4,h5,h6,strong { font-weight: normal; }
 .clearfix { *zoom: 1; }
 .clearfix:before, .clearfix:after { display: block; content: ''; line-height: 0; }
 .clearfix:after { clear: both; }
+
+/* 반응형 img */
+img { width: 100%; display: block; }
 
 /* padding, margin setting */
 .pt00 {padding-top: 0px !important;}

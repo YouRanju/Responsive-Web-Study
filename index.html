@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
     <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="assets/css/lightgallery.css">
 
     <style>
         #owl-demo .item img{ display: block; width: 100%; height: auto; }
@@ -233,17 +234,17 @@
                             <h4 class="cbox_tit">MENU5</h4>
                             <p class="cbox_desc">웹 반응형 사이트 메뉴와 관련된 스크립트 내용입니다.</p>
                             <!-- square -->
-                            <div class="square clearfix">
-                                <a href="#" ><img src="assets/img/s_img01.jpg" alt="이미지1"></a>
-                                <a href="#" ><img src="assets/img/s_img02.jpg" alt="이미지2"></a>
-                                <a href="#" ><img src="assets/img/s_img03.jpg" alt="이미지3"></a>
-                                <a href="#" ><img src="assets/img/s_img04.jpg" alt="이미지4"></a>
-                                <a href="#" ><img src="assets/img/s_img05.jpg" alt="이미지5"></a>
-                                <a href="#" ><img src="assets/img/s_img06.jpg" alt="이미지6"></a>
-                                <a href="#" ><img src="assets/img/s_img07.jpg" alt="이미지7"></a>
-                                <a href="#" ><img src="assets/img/s_img08.jpg" alt="이미지8"></a>
-                                <a href="#" ><img src="assets/img/s_img09.jpg" alt="이미지9"></a>
-                                <a href="#" ><img src="assets/img/s_img10.jpg" alt="이미지10"></a>
+                            <div id="lightgallery" class="square clearfix">
+                                <a href="assets/img/s_img01.jpg" ><img src="assets/img/s_img01.jpg" alt="이미지1"></a>
+                                <a href="assets/img/s_img02.jpg" ><img src="assets/img/s_img02.jpg" alt="이미지2"></a>
+                                <a href="assets/img/s_img03.jpg" ><img src="assets/img/s_img03.jpg" alt="이미지3"></a>
+                                <a href="assets/img/s_img04.jpg" ><img src="assets/img/s_img04.jpg" alt="이미지4"></a>
+                                <a href="assets/img/s_img05.jpg" ><img src="assets/img/s_img05.jpg" alt="이미지5"></a>
+                                <a href="assets/img/s_img06.jpg" ><img src="assets/img/s_img06.jpg" alt="이미지6"></a>
+                                <a href="assets/img/s_img07.jpg" ><img src="assets/img/s_img07.jpg" alt="이미지7"></a>
+                                <a href="assets/img/s_img08.jpg" ><img src="assets/img/s_img08.jpg" alt="이미지8"></a>
+                                <a href="assets/img/s_img09.jpg" ><img src="assets/img/s_img09.jpg" alt="이미지9"></a>
+                                <a href="assets/img/s_img10.jpg" ><img src="assets/img/s_img10.jpg" alt="이미지10"></a>
                             </div>
                             <!--//square -->
                         </article>
@@ -289,6 +290,7 @@
     <!-- JQuery -->
     <script src = "assets/js/jquery-3.3.1.min.js"></script>
     <script src = "assets/js/owl.carousel.min.js"></script>
+    <script src = "assets/js/lightgallery.min.js"></script>
     <script src = "assets/js/custom.js"></script>
     <script>
         $(document).ready(function() {
@@ -376,6 +378,9 @@
           // })
 
         });
+    </script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'));
     </script>
 </body>
 </html>

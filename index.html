@@ -20,6 +20,15 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+
+    <style>
+        #owl-demo .item img{ display: block; width: 100%; height: auto; }
+        #bar{ width: 0%; max-width: 100%; height: 4px; background: #7fc242; }
+        #progressBar{ width: 100%; background: #EDEDED; }
+    </style>
 
     <!-- webfont -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
@@ -32,9 +41,6 @@
 
     <!-- ie Version Checker -->
     <script src = "assets/js/ie-checker.js"></script>
-
-    <!-- JQuery -->
-    <script src = "assets/js/jquery-3.3.1.min.js"></script>
 
     <!--[if lte IE 8]>
         <p style="font-size: 12px; color: #fff; background: #2885b0; padding: 5px 0;
@@ -210,10 +216,18 @@
                     <section>
                         <h3 class='blind'>반응형 사이트 중앙 컨텐츠</h3>
                         <article class="cbox box4">
-                            <h4 class="cbox_tit">MENU4</h4>
+                            <h4 class="cbox_tit">Slider</h4>
                             <p class="cbox_desc">웹 반응형 사이트 메뉴와 관련된 스크립트 내용입니다.</p>
-                            <!-- -->
-                            <!--// -->
+                            <!-- slider -->
+                            <div class="slider">
+                                <div id="owl-demo" class="owl-carousel owl-theme">
+                                    <div class="item"><img src="assets/img/g_img01.jpg" alt="Wolf"></div>
+                                    <div class="item"><img src="assets/img/g_img02.jpg" alt="Cat"></div>
+                                    <div class="item"><img src="assets/img/g_img03.jpg" alt="Hedgehog"></div>
+                                    <div class="item"><img src="assets/img/g_img04.jpg" alt="Sheep"></div>
+                                </div>
+                            </div>
+                            <!--//slider -->
                         </article>
                         <article class="cbox box5">
                             <h4 class="cbox_tit">MENU5</h4>
@@ -259,5 +273,97 @@
     <footer id="footer">
         <h2>반응형 사이트 푸터</h2>
     </footer>
+
+    <!-- JQuery -->
+    <script src = "assets/js/jquery-3.3.1.min.js"></script>
+    <script src = "assets/js/owl.carousel.min.js"></script>
+    <script src = "assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        var time = 7; // time in seconds
+
+        var $progressBar,
+            $bar,
+            $elem,
+            isPause,
+            tick,
+            percentTime;
+
+          //Init the carousel
+          $("#owl-demo").owlCarousel({
+            slideSpeed : 500,
+            paginationSpeed : 500,
+            singleItem : true,
+            afterInit : progressBar,
+            afterMove : moved,
+            startDragging : pauseOnDragging
+          });
+
+          //Init progressBar where elem is $("#owl-demo")
+          function progressBar(elem){
+            $elem = elem;
+            //build progress bar elements
+            buildProgressBar();
+            //start counting
+            start();
+          }
+
+          //create div#progressBar and div#bar then prepend to $("#owl-demo")
+          function buildProgressBar(){
+            $progressBar = $("<div>",{
+              id:"progressBar"
+            });
+            $bar = $("<div>",{
+              id:"bar"
+            });
+            $progressBar.append($bar).prependTo($elem);
+          }
+
+          function start() {
+            //reset timer
+            percentTime = 0;
+            isPause = false;
+            //run interval every 0.01 second
+            tick = setInterval(interval, 10);
+          };
+
+          function interval() {
+            if(isPause === false){
+              percentTime += 1 / time;
+              $bar.css({
+                 width: percentTime+"%"
+               });
+              //if percentTime is equal or greater than 100
+              if(percentTime >= 100){
+                //slide to next item
+                $elem.trigger('owl.next')
+              }
+            }
+          }
+
+          //pause while dragging
+          function pauseOnDragging(){
+            isPause = true;
+          }
+
+          //moved callback
+          function moved(){
+            //clear interval
+            clearTimeout(tick);
+            //start again
+            start();
+          }
+
+          //uncomment this to make pause on mouseover
+          // $elem.on('mouseover',function(){
+          //   isPause = true;
+          // })
+          // $elem.on('mouseout',function(){
+          //   isPause = false;
+          // })
+
+        });
+    </script>
 </body>
 </html>

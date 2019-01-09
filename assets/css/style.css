@@ -165,26 +165,25 @@ body { background: #f1f4fb url(../img/header_bg.jpg) repeat-x center top;  }
 .square a:hover:before { opacity: 1; }
 
 .square a:nth-child(1):before { content: 'blur'; }
-.square a:nth-child(1) img:hover { filter: blur(3px); }
+.square a:hover:nth-child(1) img { filter: blur(3px); }
 .square a:nth-child(2):before { content: 'Brightness'; }
-.square a:nth-child(2) img:hover { filter: brightness(300%); }
+.square a:hover:nth-child(2) img { filter: brightness(300%); }
 .square a:nth-child(3):before { content: 'Contrast'; }
-.square a:nth-child(3) img:hover { filter: contrast(300%); }
+.square a:hover:nth-child(3) img { filter: contrast(300%); }
 .square a:nth-child(4):before { content: 'Grayscale'; }
-.square a:nth-child(4) img:hover { filter: grayscale(100%); }
+.square a:hover:nth-child(4) img { filter: grayscale(100%); }
 .square a:nth-child(5):before { content: 'Hue-rotate'; }
-.square a:nth-child(5) img:hover { filter: hue-rotate(300deg); }
+.square a:hover:nth-child(5) img { filter: hue-rotate(300deg); }
 .square a:nth-child(6):before { content: 'Invert'; }
-.square a:nth-child(6) img:hover { filter: invert(100%); }
+.square a:hover:nth-child(6) img { filter: invert(100%); }
 .square a:nth-child(7):before { content: 'Opacity'; }
-.square a:nth-child(7) img:hover { filter: opacity(20%); }
+.square a:hover:nth-child(7) img { filter: opacity(20%); }
 .square a:nth-child(8):before { content: 'Saturate'; }
-.square a:nth-child(8) img:hover { filter: saturate(200%); }
+.square a:hover:nth-child(8) img { filter: saturate(200%); }
 .square a:nth-child(9):before { content: 'Sepia'; }
-.square a:nth-child(9) img:hover { filter: sepia(100%); }
+.square a:hover:nth-child(9) img { filter: sepia(100%); }
 .square a:nth-child(10):before { content: 'drop-shadows'; }
-.square a:nth-child(10) img:hover { filter: drop-shadow(5px 5px 10px black); }
-
+.square a:hover:nth-child(10) img { filter: drop-shadow(5px 5px 10px black); }
 
 /* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
 @media (max-width: 1280px) {
